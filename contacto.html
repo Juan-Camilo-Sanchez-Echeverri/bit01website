@@ -29,9 +29,75 @@
       </nav>
     </header>
 
-    <hr />
+    <main>
+      <form>
+        <label for=" nombreapellido">Nombre y Apellido</label>
+        <input type="text" id="nombreapellido" class="input-global" required />
 
-    <main></main>
+        <label for="correoelectronico">Correo Electrónico</label>
+        <input
+          type="email"
+          id="correoelectronico"
+          class="input-global"
+          required
+          placeholder="email@dominio.com"
+        />
+
+        <label for="telefono">Teléfono</label>
+        <input
+          type="tel"
+          id="telefono"
+          class="input-global"
+          required
+          placeholder="(xx) xxx xxxxxxx"
+        />
+
+        <label for="mensaje">Mensaje</label>
+
+        <textarea cols="70" rows="10" id="mensaje" required></textarea>
+
+        <h2>¿Como le gustaría que lo contactemos?</h2>
+
+        <section>
+          <label for="radio-email">
+            <input
+              type="radio"
+              value="email"
+              id="radio-email"
+              name="contacto"
+            />
+            Email
+          </label>
+
+          <label for="radio-telefono">
+            <input
+              type="radio"
+              value="telefono"
+              id="radio-telefono"
+              name="contacto"
+            />Teléfono
+          </label>
+
+          <label for="radio-whatsapp">
+            <input
+              type="radio"
+              value="whatsapp"
+              id="radio-whatsapp"
+              name="contacto"
+              checked
+            />WhatsApp
+          </label>
+        </section>
+
+          <label class="checkbox">
+            <input type="checkbox" checked />¿Le gustaría recibir novedades de
+            pirateHub?
+          </label>
+
+        <input type="submit" value="Enviar Formulario" class="btn" />
+      </form>
+    </main>
+
     <footer>
       <p class="copyright">&copy Copyright Pirate Hub</p>
     </footer>
