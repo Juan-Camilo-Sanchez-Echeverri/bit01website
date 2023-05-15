@@ -1,104 +1,73 @@
 <!DOCTYPE html>
 
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Pirate Hub - Contacto</title>
-    <link rel="stylesheet" href="./assets/css/normalize.css" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <header>
-      <nav>
-        <img
-          src="./assets/img/calavera_verde.jpg"
-          alt="Logo PirateHub"
-          class="logo"
-        />
-        <a href="./index.html">Inicio</a>
-        <a href="./productos.html">Productos</a>
-        <a href="contacto.html">Contacto</a>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Pirate Hub - Contacto</title>
+  <link rel="stylesheet" href="./assets/css/normalize.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+    <link rel="shortcut icon" href="./assets/img/craneo.ico" type="image/x-icon">
+</head>
 
-    <main>
-      <form>
-        <label for=" nombreapellido">Nombre y Apellido</label>
-        <input type="text" id="nombreapellido" class="input-global" required />
+<body>
+  <header>
+    <nav>
+      <img src="./assets/img/calavera_verde.jpg" alt="Logo PirateHub" class="logo" />
+      <a href="./index.html">Inicio</a>
+      <a href="./productos.html">Productos</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
 
-        <label for="correoelectronico">Correo Electrónico</label>
-        <input
-          type="email"
-          id="correoelectronico"
-          class="input-global"
-          required
-          placeholder="email@dominio.com"
-        />
+  <main>
+    <form>
+      <label for=" nombreapellido">Nombre y Apellido</label>
+      <input type="text" id="nombreapellido" class="input-global" required />
 
-        <label for="telefono">Teléfono</label>
-        <input
-          type="tel"
-          id="telefono"
-          class="input-global"
-          required
-          placeholder="(xx) xxx xxxxxxx"
-        />
+      <label for="correoelectronico">Correo Electrónico</label>
+      <input type="email" id="correoelectronico" class="input-global" required placeholder="email@dominio.com" />
 
-        <label for="mensaje">Mensaje</label>
+      <label for="telefono">Teléfono</label>
+      <input type="tel" id="telefono" class="input-global" required placeholder="(xx) xxx xxxxxxx" />
 
-        <textarea cols="70" rows="10" id="mensaje" required></textarea>
+      <label for="mensaje">Mensaje</label>
 
-        <h2>¿Como le gustaría que lo contactemos?</h2>
+      <textarea cols="70" rows="10" id="mensaje" required></textarea>
 
-        <section>
-          <label for="radio-email">
-            <input
-              type="radio"
-              value="email"
-              id="radio-email"
-              name="contacto"
-            />
-            Email
-          </label>
+      <h2>¿Como le gustaría que lo contactemos?</h2>
 
-          <label for="radio-telefono">
-            <input
-              type="radio"
-              value="telefono"
-              id="radio-telefono"
-              name="contacto"
-            />Teléfono
-          </label>
+      <section>
+        <label for="radio-email">
+          <input type="radio" value="email" id="radio-email" name="contacto" />
+          Email
+        </label>
 
-          <label for="radio-whatsapp">
-            <input
-              type="radio"
-              value="whatsapp"
-              id="radio-whatsapp"
-              name="contacto"
-              checked
-            />WhatsApp
-          </label>
-        </section>
+        <label for="radio-telefono">
+          <input type="radio" value="telefono" id="radio-telefono" name="contacto" />Teléfono
+        </label>
 
-          <label class="checkbox">
-            <input type="checkbox" checked />¿Le gustaría recibir novedades de pirateHub?
-          </label>
+        <label for="radio-whatsapp">
+          <input type="radio" value="whatsapp" id="radio-whatsapp" name="contacto" checked />WhatsApp
+        </label>
+      </section>
 
-        <input type="submit" value="Enviar Formulario" class="btn" />
-      </form>
-    </main>
+      <label class="checkbox">
+        <input type="checkbox" checked />¿Le gustaría recibir novedades de pirateHub?
+      </label>
 
-    <footer>
-      <p>&copy Copyright Pirate Hub</p>
-    </footer>
-  </body>
+      <input type="submit" value="Enviar Formulario" class="btn" />
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy Copyright Pirate Hub</p>
+  </footer>
+</body>
+
 </html>
