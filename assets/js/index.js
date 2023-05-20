@@ -13,15 +13,15 @@ const $gracias = document.getElementById('gracias');
 const $nombre = document.getElementById('nombre');
 const correo = document.getElementById('correo');
 
-//!Corregir Bug
 function valueInput() {
-  let infoContacto = '';
+  let info;
   for (let i = 0; i < $contacto.length; i++) {
     if ($contacto[i].checked) {
-      infoContacto = $contacto[i].value;
+      info = $contacto[i].value;
       break;
     }
   }
+  return info;
 }
 
 let infoContacto = valueInput();
