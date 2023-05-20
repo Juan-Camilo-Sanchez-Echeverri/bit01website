@@ -26,12 +26,12 @@
   </header>
 
   <main>
-    <form>
+    <form id="form">
       <label for=" nombreapellido">Nombre y Apellido</label>
       <input type="text" id="nombreapellido" class="input-global" required />
 
       <label for="correoelectronico">Correo Electrónico</label>
-      <input type="email" id="correoelectronico" class="input-global" required placeholder="email@dominio.com" />
+      <input type="email" id="correo" class="input-global" required placeholder="email@dominio.com" />
 
       <label for="telefono">Teléfono</label>
       <input type="tel" id="telefono" class="input-global" required placeholder="(xx) xxx xxxxxxx" />
@@ -58,16 +58,24 @@
       </section>
 
       <label class="checkbox">
-        <input type="checkbox" checked />¿Le gustaría recibir novedades de pirateHub?
+        <input type="checkbox" checked id="novedades" />¿Le gustaría recibir novedades de pirateHub?
       </label>
 
-      <input type="submit" value="Enviar Formulario" class="btn" />
+      <input type="submit" value="Enviar Formulario" class="btn" id="send" />
+    </main>
     </form>
-  </main>
+
+    <div id="gracias">
+      <h1 id="nombre">Juan Camilo Sanchez</h1>
+      <h1 id="correoElectronico">Hola</h1>
+      <h1 id="telefono">Hola</h1>
+      <h1 id="mensaje">Hola</h1>
+      <h1 id="contacto">Hola</h1>
+    </div>
 
   <footer>
     <p>&copy Copyright Pirate Hub</p>
   </footer>
 </body>
-
+<script src="./assets/js/index.js"></script>
 </html>
