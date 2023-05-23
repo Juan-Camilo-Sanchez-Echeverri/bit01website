@@ -26,7 +26,29 @@ $form.addEventListener('submit', (event) => {
     contacto: infoContacto,
   };
 
+  let bienvendida = `<h1>Bienvendid@  ${informacion.nombreCompleto} gracias por visitarnos</h1>`;
+  let despedida = `<h2>Gracias por confiar en nosotros,esperamos poder satisfacer tus necesidades y darte un agradable servicio</h2>`;
+
+  cambioEstilos();
+
+  if (
+    informacion.contacto == 'whatsapp' ||
+    informacion.contacto == 'telefono'
+  ) {
+    $gracias.innerHTML =
+      bienvendida +
+      `<h2>Te contactaremos a tu telefono ${informacion.telefono}</h2>` +
+      despedida;
+  } else if (informacion.contacto == 'email') {
+    $gracias.innerHTML =
+      bienvendida +
+      `<h2>Te contactaremos a tu correo ${informacion.correo}</h2>` +
+      despedida;
+  }
+
   console.log(informacion);
+
+  $form.reset();
 });
 
 function cambioEstilos() {
