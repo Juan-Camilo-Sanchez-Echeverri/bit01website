@@ -28,24 +28,30 @@ $form.addEventListener('submit', (event) => {
     contacto: infoContacto,
   };
 
-  let bienvendida = `<h1>Bienvendid@  ${informacion.nombreCompleto} gracias por visitarnos</h1>`;
-  let despedida = `<h2>Gracias por confiar en nosotros,esperamos poder satisfacer tus necesidades y darte un agradable servicio</h2>`;
+  let bienvendida = `<h1>Bienvendid@  ${informacion.nombreCompleto} gracias por visitarnos.</h1>`;
+  let despedida = `<h2>Gracias por confiar en nosotros,esperamos poder satisfacer tus necesidades y darte un agradable servicio.</h2>
+  <a href="./productos.html" class="btn">Seguir Explorando</a>`;
 
   cambioEstilos();
 
-  if (
-    informacion.contacto == 'whatsapp' ||
-    informacion.contacto == 'telefono'
-  ) {
-    $gracias.innerHTML =
-      bienvendida +
-      `<h2>Te contactaremos a tu telefono ${informacion.telefono}</h2>` +
-      despedida;
-  } else if (informacion.contacto == 'email') {
-    $gracias.innerHTML =
-      bienvendida +
-      `<h2>Te contactaremos a tu correo ${informacion.correo}</h2>` +
-      despedida;
+  switch (informacion.contacto) {
+    case 'telefono':
+      $gracias.innerHTML =
+        bienvendida +
+        `<h2>Te contactaremos a tu telefono ${informacion.telefono}</h2>` +
+        despedida;
+      break;
+    case 'email':
+      $gracias.innerHTML =
+        bienvendida +
+        `<h2>Te contactaremos a tu correo ${informacion.correo}</h2>` +
+        despedida;
+    default:
+      $gracias.innerHTML =
+        bienvendida +
+        `<h2>Te escribiremos pronto a tu telefono ${informacion.telefono}</h2>` +
+        despedida;
+      break;
   }
 
   console.log(informacion);
