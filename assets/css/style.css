@@ -3,7 +3,7 @@
   --color-btn: #0b4f4c;
   --color-bg: black;
   --color-secundary: white;
-  --font: "Oswald", sans-serif;
+  --font: 'Oswald', sans-serif;
 }
 
 * {
@@ -87,7 +87,7 @@ footer {
 
 #info {
   height: 500px;
-  background: url("../img/teclado.jpg") no-repeat center center/cover;
+  background: url('../img/teclado.jpg') no-repeat center center/cover;
   padding: 50px;
   display: flex;
   flex-direction: column;
@@ -110,33 +110,29 @@ footer {
   }
 }
 
-@media screen and (max-width:392px) {
-  .botones{
+@media screen and (max-width: 392px) {
+  .botones {
     flex-direction: column;
     text-align: center;
     gap: 20px;
   }
-  
 }
 
 /** Productos **/
 
-.box {
-  cursor: pointer;
-  color: var(--color-secundary);
-}
-
 .productos {
   width: 90%;
-  margin: auto;
-  margin-top: 40px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 25px;
+  border-radius: 10px;
+  margin: 20px auto;
+  padding: 20px;
+  gap: 30px;
 }
 
 .productos img {
-  width: 100%;
+  width: 90%;
+  background-size: cover;
   height: 180px;
   border-radius: 20px;
   object-fit: fill;
@@ -148,9 +144,43 @@ footer {
   margin: 10px 0;
 }
 
-.box:hover img {
-  border: 3px solid var(--color-secundary);
+.flip-card {
+  height: 230px;
+  perspective: 1000px;
 }
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card:hover {
+  cursor: pointer;
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: grid;
+  place-items: center;
+}
+
+.flip-card-back {
+  background-color: #191e24;
+  transform: rotateY(180deg);
+  border-radius: 10px;
+}
+
 
 @media screen and (max-width: 1350px) {
   .productos {
@@ -160,11 +190,11 @@ footer {
 
 @media screen and (max-width: 1100px) {
   .productos {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   .productos {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -173,10 +203,6 @@ footer {
 @media screen and (max-width: 480px) {
   .productos {
     grid-template-columns: 1fr;
-  }
-
-  .productos img {
-    height: 270px;
   }
 }
 
@@ -216,14 +242,15 @@ textarea {
   border-radius: 20px;
 }
 
-input[type="radio"],
-input[type="checkbox"],
-input[type="submit"] {
+input[type='radio'],
+input[type='checkbox'],
+input[type='submit'] {
   margin: 10px;
 }
 
 @media screen and (max-width: 480px) {
-  h1,p {
+  h1,
+  p {
     padding: 10px;
     text-align: center;
   }
@@ -242,12 +269,12 @@ input[type="submit"] {
   }
 }
 
-#gracias{
+#gracias {
   margin: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color:#80808082;
+  background-color: #80808082;
   border-radius: 20px;
   display: none;
   text-align: center;
