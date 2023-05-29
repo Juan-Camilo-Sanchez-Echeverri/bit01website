@@ -1,3 +1,5 @@
+'use strict';
+
 const $form = document.getElementById('form');
 const $gracias = document.getElementById('gracias');
 

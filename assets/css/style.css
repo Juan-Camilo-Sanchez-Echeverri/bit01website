@@ -11,6 +11,7 @@
   list-style: none;
   text-decoration: none;
   outline: none;
+  text-align: center;
 }
 
 body {
@@ -82,7 +83,7 @@ footer {
   color: var(--color-btn);
 }
 
-/*index*/
+/** Index **/
 
 #info {
   height: 500px;
@@ -94,11 +95,10 @@ footer {
   justify-content: flex-end;
   margin-bottom: 20px;
   margin-top: 20px;
+  border-radius: 10px;
 }
-
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 420px) {
   nav {
-    display: flex;
     flex-direction: column;
   }
   nav a {
@@ -110,7 +110,16 @@ footer {
   }
 }
 
-/* Productos*/
+@media screen and (max-width:392px) {
+  .botones{
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  
+}
+
+/** Productos **/
 
 .box {
   cursor: pointer;
@@ -171,7 +180,7 @@ footer {
   }
 }
 
-/*Contacto*/
+/** Contacto **/
 
 form {
   margin: 40px;
@@ -214,7 +223,7 @@ input[type="submit"] {
 }
 
 @media screen and (max-width: 480px) {
-  h1,h2,p {
+  h1,p {
     padding: 10px;
     text-align: center;
   }
